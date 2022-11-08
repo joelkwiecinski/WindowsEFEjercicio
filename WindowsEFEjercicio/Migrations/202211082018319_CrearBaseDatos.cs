@@ -42,8 +42,8 @@
                 .PrimaryKey(t => t.IdPlanilla)
                 .ForeignKey("dbo.Carrera", t => t.IdCarrera, cascadeDelete: true)
                 .ForeignKey("dbo.Curso", t => t.IdCurso, cascadeDelete: true)
-                .ForeignKey("dbo.Materia", t => t.IdMateria, cascadeDelete: true)
                 .ForeignKey("dbo.Profesor", t => t.IdProfesor, cascadeDelete: true)
+                .ForeignKey("dbo.Materia", t => t.IdMateria, cascadeDelete: true)
                 .Index(t => t.IdCarrera)
                 .Index(t => t.IdMateria)
                 .Index(t => t.IdProfesor)
@@ -134,7 +134,7 @@
                         Apellido = c.String(nullable: false, maxLength: 50, unicode: false),
                     })
                 .PrimaryKey(t => t.IdProfesor)
-                .ForeignKey("dbo.Localidad", t => t.IdLocalidad, cascadeDelete: true)
+                .ForeignKey("dbo.Localidad", t => t.IdLocalidad, cascadeDelete: false)
                 .Index(t => t.IdLocalidad);
             
             CreateTable(
@@ -159,10 +159,10 @@
         
         public override void Down()
         {
-            DropForeignKey("dbo.Planilla", "IdProfesor", "dbo.Profesor");
             DropForeignKey("dbo.Planilla", "IdMateria", "dbo.Materia");
             DropForeignKey("dbo.Detalle", "IdPlanilla", "dbo.Planilla");
             DropForeignKey("dbo.Evaluacion", "IdTipo", "dbo.Tipo");
+            DropForeignKey("dbo.Planilla", "IdProfesor", "dbo.Profesor");
             DropForeignKey("dbo.Profesor", "IdLocalidad", "dbo.Localidad");
             DropForeignKey("dbo.Estudiante", "IdLocalidad", "dbo.Localidad");
             DropForeignKey("dbo.Evaluacion", "IdEstudiante", "dbo.Estudiante");

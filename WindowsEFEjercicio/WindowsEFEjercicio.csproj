@@ -63,9 +63,9 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202211081953428_CrearBaseDatos.cs" />
-    <Compile Include="Migrations\202211081953428_CrearBaseDatos.designer.cs">
-      <DependentUpon>202211081953428_CrearBaseDatos.cs</DependentUpon>
+    <Compile Include="Migrations\202211082018319_CrearBaseDatos.cs" />
+    <Compile Include="Migrations\202211082018319_CrearBaseDatos.designer.cs">
+      <DependentUpon>202211082018319_CrearBaseDatos.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Carrera.cs" />
@@ -85,8 +85,8 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202211081953428_CrearBaseDatos.resx">
-      <DependentUpon>202211081953428_CrearBaseDatos.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202211082018319_CrearBaseDatos.resx">
+      <DependentUpon>202211082018319_CrearBaseDatos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
